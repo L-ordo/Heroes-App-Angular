@@ -13,7 +13,7 @@
         <mat-nav-list>
             <mat-list-item
              *ngFor="let item of sidebarItems"
-             routerLink="item.url"
+             [routerLink]="item.url"
              (click)="sidenav.toggle()"
              >
             <mat-icon matListItemIcon >{{item.icon}}</mat-icon>
@@ -35,11 +35,11 @@
 
     </mat-toolbar>
 
-    <div class="container">
+    <div class="container p-2">
         <router-outlet></router-outlet>
     </div>
-    
-</mat-sidenav-container>  
+
+</mat-sidenav-container>
 
 
 
